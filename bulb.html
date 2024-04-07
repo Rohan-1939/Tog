@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #FFDEE9;
+            background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+        }
+        .bulb-img{
+            height: 250px;
+        }
+        .bulb-container{
+            background-color: white;
+            width: 400px;
+            height: 300px;
+            display: block;
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: #B5FFFC;
+        }
+        .app-title{
+            text-align: center;
+
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .btn{
+            font-size: 20px;
+            padding: 5px 20pxx;
+            border-radius: 40px;
+            border: none;
+            margin: 0 20px;
+            cursor: pointer;
+            width: 100px;
+        }
+        .btn:hover{
+            box-shadow: 0 4px 10px rgba(48, 42, 42, 0.1)
+        }
+        .btn-on{
+            background-color: green;
+        }
+        .btn-of{
+            background-color: rgb(253, 0, 0);
+        }
+        .btn-a{
+            background-color: #6060d6;
+        }
+        .btn-b{
+            background-color: rgb(208, 96, 198);
+        }
+        .btn-c{
+            background-color: rgb(98, 211, 209);
+        }
+        .btn-d{
+            background-color: rgb(253, 152, 70);
+        }
+        .btn-f{
+            background-color: rgb(216, 104, 125);
+        }
+        @media screen and ( max-width :600px){
+            .bulb-container{
+                width: 80%;
+
+            }
+            .bulb-img{
+                height: 200px;;
+            }
+        
+        }
+    </style>
+</head>
+<body>
+        <h1 class="app-title">Bulb Toggler</h1>
+    <div class="bulb-container">
+        <img src="of.png" alt="" class="bulb-img" id="blub">
+        
+    </div>
+    <div class="btn-container">
+    <button class="btn btn-on" onclick="toggleblub('on')">ON</button>
+    <button class="btn btn-of" onclick="toggleblub('of')">OFF</button>
+    </div>
+
+
+    <h1 class="app-title">Fac0 Toggler</h1>
+    <div class="bulb-container">
+        <img src="4.png" alt="" class="bulb-img" id="face">
+        
+    </div>
+    <div class="btn-container">
+    <button class="btn btn-a" onclick="emotion('1')">Love</button>
+    <button class="btn btn-b" onclick="emotion('2')">Awesome</button>
+    <button class="btn btn-c" onclick="emotion('3')">Cute</button>
+    <button class="btn btn-d" onclick="emotion('4')">Silent</button>
+    <button class="btn btn-e" onclick="emotion('5')">Party</button>
+    <button class="btn btn-f" onclick="emotion('6')">Happy</button>
+    </div>
+
+    <h1 class="app-title">Wifi Toggler</h1>
+    <div class="bulb-container">
+        <img src="off.png" alt="" class="bulb-img" id="wifi">
+        
+    </div>
+    <div class="btn-container">
+    <button class="btn btn-on" onclick="togglewifi('onn')">ON</button>
+    <button class="btn btn-of" onclick="togglewifi('off')">OFF</button>
+    </div>
+
+
+
+
+
+
+    <script>
+        function toggleblub(state){
+            const blubelement = document.getElementById("blub").src=`${state}.png`;
+        }
+        function emotion(state){
+            const faceemotion = document.getElementById("face").src=`${state}.png`;
+        }
+        function togglewifi(state){
+            const wifi = document.getElementById('wifi').src = `${state}.png`;
+        }
+  
+    </script>
+</body>
+</html>
